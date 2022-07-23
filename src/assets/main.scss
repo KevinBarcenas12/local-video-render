@@ -1,0 +1,39 @@
+@use "mixins" as Mixins;
+
+.icon {
+    color: currentColor;
+    stroke: currentColor;
+    fill: currentColor;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+%line {
+    word-wrap: keep-all;
+    line-break: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+}
+
+.block {
+    display: block;
+}
+
+.line {
+    @extend %line;
+    display: inline-block;
+    &-block {
+        @extend %line;
+        display: block;
+    }
+
+    .icon {
+        height: 100%;
+        vertical-align: middle;
+    }
+}

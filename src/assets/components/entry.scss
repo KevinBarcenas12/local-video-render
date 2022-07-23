@@ -1,0 +1,42 @@
+.video-entry {
+    position: relative;
+    padding: .5rem;
+    height: 6em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    border: solid .01rem hsl(var(--hsl-bg-alt) / .075);
+
+    &.invalid {cursor: not-allowed}
+
+    .content {
+        float: left;
+        flex-basis: 100%;
+        overflow-x: auto;
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .thumbnail-container {
+        height: 100%;
+        aspect-ratio: 16/9;
+        float: left;
+    }
+  
+    .thumbnail {
+        position: relative;
+        margin-inline: auto;
+        display: block;
+        height: 100%;
+    }
+
+    .current-selection {
+        font-size: 1.5em;
+        aspect-ratio: 1/1;
+        display: grid;
+        place-items: center;
+    }
+}

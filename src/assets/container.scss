@@ -1,0 +1,22 @@
+@mixin max-container($size: 360px) {
+    @media (min-width: $size) {
+        max-width: $size;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin-inline: auto;
+    position: relative;
+
+    @include max-container();
+    @include max-container(480px);
+    @include max-container(720px);
+    @include max-container(854px);
+    @include max-container(1280px);
+    @include max-container(1540px);
+    @include max-container(1920px);
+    @include max-container(2160px);
+    @include max-container(2540px);
+}

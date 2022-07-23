@@ -1,0 +1,30 @@
+@use "./mixins" as Mixins;
+
+.input {
+    width: 100%;
+    height: 100%;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    @include Mixins.mobile {
+        font-size: 1.25em;
+    }
+
+    &__label {
+        padding: 1.5em 2.5em;
+        border-radius: 1rem;
+        border: dashed var(--clr-bg-alt) .125em;
+    }
+
+    .already-files {
+        font-size: .65em;
+    }
+    .show-btn {
+        cursor: pointer;
+        color: var(--clr-font-alt);
+    }
+}

@@ -1,0 +1,19 @@
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(var(--hsl-bg-alt) / .25);
+    display: grid;
+    place-items: center;
+
+    &__container {
+        position: relative;
+        font-size: 1.5em;
+        line-height: 1.75em;
+        padding: 2em;
+        background-color: var(--clr-bg-main);
+        border-radius: 1em;
+    }
+}
